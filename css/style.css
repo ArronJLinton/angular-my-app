@@ -23,18 +23,19 @@ html, body {
 }
 
 .main h1 {
- color: #F65A5B ;
- font-size: 64px;
- margin: 0 0 80px 0;
- padding: 20px 0;
+   color: #F65A5B ;
+   font-size: 64px;
+   margin: 0 0 80px 0;
+   padding: 20px 0;
    line-height: 60px;
-   width: 50%;
+   width: 100%;
+   text-align: center;
 }
 
 .main h2 {
  background-color: #DDDDDD ;
  color: #999999 ;
- font-size: 20px;
+ font-size: 30px;
  margin: 0 0 40px 0;
  padding: 20px 0;
 }
@@ -63,9 +64,9 @@ html, body {
 
 .title,
 .date {
- color: #444;
- margin: 0;
- font-size: 18px;
+   color: #444;
+   margin: 0;
+   font-size: 18px;
    font-weight: 800;
 }
 
