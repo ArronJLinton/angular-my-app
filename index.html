@@ -35,7 +35,7 @@ Value of title we show up when we view it in the browser
         <input id="name" ng-model="name" type="text" placeholder="Book Title">
         <input id="price" ng-model="price" type="text" placeholder="Enter Book Price">
         <input id="date" ng-model="date" type="date" placeholder="Publication Date">
-        <input ng-click="addBook()" type="submit" value="Submit" name="">
+        <input ng-click="addBook()" type="submit" value="Submit">
       <form>
       </div>
 
@@ -63,6 +63,7 @@ Value of title we show up when we view it in the browser
         <p class="dislikes" ng-click="minusOne($index)">+ {{ product.dislikes }}</p>       
       </div>
 
+        <viewSummary></viewSummary>
       </div>
     </div>
 
@@ -77,6 +78,9 @@ Value of title we show up when we view it in the browser
 
     <!-- Controllers -->
     <script src="js/controllers/MainController.js"></script>
+
+    <!-- Custom Directives -->
+  <script src="js/directives/viewSummary.js"></script>
 
   </body>
 </html>
