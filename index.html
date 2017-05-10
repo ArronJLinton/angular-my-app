@@ -21,6 +21,7 @@
     </div>
 
 <!-- Like ng-app, ng-controller is a directive that defines the controller scope. This means that properties attached to $scope in MainController become available to use within <div class='main'> -->
+
     <div class="main" ng-controller="MainController">
       <div class="container">
 
@@ -44,6 +45,12 @@ Value of title we show up when we view it in the browser
         <p class="price">{{ product.price | currency }}</p>
 <!-- 'date' is an AngularJS filter -->
         <p class="date"> {{ product.pubdate | date }}</p>
+
+      <div class="rating">
+<!-- The ng-click is a directive. When <p class="likes"> is clicked, ng-click tells AngularJS to run the plusOne() function in the controller. -->
+<!-- We put the $ in front of index in order to select 'this' index from user click -->
+        <p class="likes" ng-click="plusOne($index)">+ {{ product.likes }}         </p>
+      <div>
     </div> 
   </div>
 
