@@ -25,20 +25,22 @@
     <div class="main" ng-controller="MainController">
       <div class="container">
 
+<!--       This is called an expression - '{{ title }}'. Expressions are used to display values on the page. 
+Value of title we show up when we view it in the browser
+-->
+        <h1>{{ title }}</h1>
+
 
       <div>
-        <label>Add A Book</label>
+        <label><h3>Add A Book<h3></label>
       <form>
-        <input ng-model="name" type="text" placeholder="Book Title">
+        <input id="name" ng-model="name" type="text" placeholder="Book Title">
         <input id="price" ng-model="price" type="text" placeholder="Enter Book Price">
         <input id="date" ng-model="date" type="date" placeholder="Publication Date">
         <input ng-click="addBook()" type="submit" value="Submit" name="">
       <form>
       </div>
-<!--       This is called an expression - '{{ title }}'. Expressions are used to display values on the page. 
-Value of title we show up when we view it in the browser
--->
-        <h1>{{ title }}</h1>
+
         <h2>{{ promo }}</h2>
 
 <!-- the ng-repeat is another directive. It loops through an array and displays each element. Here, the ng-repeat repeats all the HTML inside <div class="col-md-6"> for each element in the products array. -->
