@@ -16,7 +16,7 @@
   <body ng-app="myApp">
     <div class="header">
       <div class="container">
-        <h1>Book End</h1>
+        <h1>Alexander Library</h1>
       </div>
     </div>
 
@@ -24,7 +24,21 @@
     <div class="main" ng-controller="MainController">
       <div class="container">
 
+<!--       This is called an expression - '{{ title }}'. Expressions are used to display values on the page. 
+Value of title we show up when we view it in the browser
+-->
         <h1>{{ title }}</h1>
+        <h2>{{ promo }}</h2>
+
+<!-- 'uppercase' is an AngularJS filter -->
+        <p class="title">{{ product.name | uppercase }}</p>
+
+<!-- 'currency' is an AngularJS filer. It sends this number into the currency filter. The pipe symbol '|' then takes the output on the left and "pipes" it to the right. -->
+<!--   The filter outputs a formatted currency with the dollar sign and the correct decimal places. -->
+        <p class="price">{{ product.price | currency }}</p>
+<!-- 'date' is an AngularJS filter -->
+        <p class="date"> {{ product.pubdate | date }}</p>
+
 
       </div>
     </div>
