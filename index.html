@@ -30,6 +30,12 @@ Value of title we show up when we view it in the browser
         <h1>{{ title }}</h1>
         <h2>{{ promo }}</h2>
 
+<!-- the ng-repeat is another directive. It loops through an array and displays each element. Here, the ng-repeat repeats all the HTML inside <div class="col-md-6"> for each element in the products array. -->
+<!-- What does 'product' stand for in 'product in products' ? -->
+<!-- We do this so we aren't redundant with our code -->
+ <div ng-repeat="product in products" class="col-md-6"> 
+    <div class="thumbnail"> 
+    <img ng-src="{{ product.cover }}">
 <!-- 'uppercase' is an AngularJS filter -->
         <p class="title">{{ product.name | uppercase }}</p>
 
@@ -38,7 +44,8 @@ Value of title we show up when we view it in the browser
         <p class="price">{{ product.price | currency }}</p>
 <!-- 'date' is an AngularJS filter -->
         <p class="date"> {{ product.pubdate | date }}</p>
-
+    </div> 
+  </div>
 
       </div>
     </div>
