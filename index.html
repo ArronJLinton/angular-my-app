@@ -25,6 +25,16 @@
     <div class="main" ng-controller="MainController">
       <div class="container">
 
+
+      <div>
+        <label>Add A Book</label>
+      <form>
+        <input ng-model="name" type="text" placeholder="Book Title">
+        <input id="price" ng-model="price" type="text" placeholder="Enter Book Price">
+        <input id="date" ng-model="date" type="date" placeholder="Publication Date">
+        <input ng-click="addBook()" type="submit" value="Submit" name="">
+      <form>
+      </div>
 <!--       This is called an expression - '{{ title }}'. Expressions are used to display values on the page. 
 Value of title we show up when we view it in the browser
 -->
@@ -34,7 +44,7 @@ Value of title we show up when we view it in the browser
 <!-- the ng-repeat is another directive. It loops through an array and displays each element. Here, the ng-repeat repeats all the HTML inside <div class="col-md-6"> for each element in the products array. -->
 <!-- What does 'product' stand for in 'product in products' ? -->
 <!-- We do this so we aren't redundant with our code -->
- <div ng-repeat="product in products" class="col-md-6"> 
+ <div ng-repeat="product in products" class="col-md-6">
     <div class="thumbnail"> 
     <img ng-src="{{ product.cover }}">
 <!-- 'uppercase' is an AngularJS filter -->
@@ -51,9 +61,7 @@ Value of title we show up when we view it in the browser
 <!-- We put the $ in front of index in order to select 'this' index from user click -->
         <p class="likes" ng-click="plusOne($index)">+ {{ product.likes }}</p>
         <p class="dislikes" ng-click="minusOne($index)">+ {{ product.dislikes }}</p>       
-      <div>
-    </div> 
-  </div>
+      </div>
 
       </div>
     </div>

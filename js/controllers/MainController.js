@@ -36,7 +36,7 @@ app.controller('MainController', ['$scope', function($scope){
     pubdate: new Date('1998', '08', '01'),
     likes: 0,
     dislikes: 0
-  }
+  },
 ];
 
 // The plusOne() function gets the index of the product that was clicked, and then adds one to that product's likes property.
@@ -45,6 +45,25 @@ app.controller('MainController', ['$scope', function($scope){
   };
   $scope.minusOne = function(index) {
     $scope.products[index].dislikes += 1;
+  };
+
+
+// Onclick function for adding a book
+  $scope.addBook = function(name, price, date) {
+
+  	name = $scope.name;
+  	price = $scope.price;
+  	date = $scope.date;
+
+  $scope.products.push({
+  		name: name,
+  		price: price,
+  		pubdate: date,
+  		likes: 0,
+  		dislikes: 0
+  	});
+
+  	
   };
 
 
