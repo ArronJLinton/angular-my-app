@@ -49,7 +49,8 @@ Value of title we show up when we view it in the browser
       <div class="rating">
 <!-- The ng-click is a directive. When <p class="likes"> is clicked, ng-click tells AngularJS to run the plusOne() function in the controller. -->
 <!-- We put the $ in front of index in order to select 'this' index from user click -->
-        <p class="likes" ng-click="plusOne($index)">+ {{ product.likes }}         </p>
+        <p class="likes" ng-click="plusOne($index)">+ {{ product.likes }}</p>
+        <p class="dislikes" ng-click="minusOne($index)">+ {{ product.dislikes }}</p>       
       <div>
     </div> 
   </div>
