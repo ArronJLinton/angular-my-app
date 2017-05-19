@@ -5,8 +5,11 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Include the AngularJS library -->
+    <!-- AngularJS library -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <!-- AngularJS npm package -->
+  <script src="node_modules/angular-uploads/dist/angular-uploads.js"></script>
+
   </head>
 
 <!-- 
@@ -32,9 +35,14 @@ Value of title we show up when we view it in the browser
       <div>
         <label><h3>Add A Book<h3></label>
       <form>
+<!-- Input controls provides data-binding by using the ng-model directive. -->
+<!-- With the ng-model directive you can bind the value of an input field to a variable created in AngularJS.
+ -->
+
         <input id="name" ng-model="name" type="text" placeholder="Book Title">
         <input id="price" ng-model="price" type="text" placeholder="Enter Book Price">
         <input id="date" ng-model="date" type="date" placeholder="Publication Date">
+        <button ng-model="book-image" msl-file-input="myHandler">Select File</button>
         <input ng-click="addBook()" type="submit" value="Submit">
       <form>
       </div>
@@ -63,7 +71,9 @@ Value of title we show up when we view it in the browser
         <p class="dislikes" ng-click="minusOne($index)">+ {{ product.dislikes }}</p>       
       </div>
 
-        <viewSummary></viewSummary>
+        <view-summary></view-summary>
+        
+
       </div>
     </div>
 

@@ -49,7 +49,7 @@ app.controller('MainController', ['$scope', function($scope){
 
 
 // Onclick function for adding a book
-  $scope.addBook = function(name, price, date) {
+  $scope.addBook = function(name, price, date, image) {
 
   	name = $scope.name;
   	price = $scope.price;

@@ -1,3 +1,4 @@
 
 // A module contains the different components of an AngularJS app.
-var app = angular.module("myApp", []);
+// In the brackets we declare the msl.uploads dependency
+var app = angular.module("myApp", ['msl.uploads']);
