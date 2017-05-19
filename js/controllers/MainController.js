@@ -47,6 +47,9 @@ app.controller('MainController', ['$scope', function($scope){
     $scope.products[index].dislikes += 1;
   };
 
+$scope.myHandler = function (files) {
+  console.log(files);
+}
 
 // Onclick function for adding a book
   $scope.addBook = function(name, price, date, image) {
@@ -54,11 +57,13 @@ app.controller('MainController', ['$scope', function($scope){
   	name = $scope.name;
   	price = $scope.price;
   	date = $scope.date;
+    image = $scope.image;
 
   $scope.products.push({
   		name: name,
   		price: price,
   		pubdate: date,
+      cover: image,
   		likes: 0,
   		dislikes: 0
   	});
