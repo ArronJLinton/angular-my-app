@@ -11,7 +11,7 @@ app.controller('MainController', ['$scope', function($scope){
     name: 'The Book of Trees', 
     price: 19, 
     pubdate: new Date('2014', '03', '08'), 
-    cover: 'img/the-book-of-trees.jpg',
+    cover: '',
     likes: 0,
     dislikes: 0
   }, 
@@ -19,7 +19,7 @@ app.controller('MainController', ['$scope', function($scope){
     name: 'Program or be Programmed', 
     price: 8, 
     pubdate: new Date('2013', '08', '01'), 
-    cover: 'img/program-or-be-programmed.jpg',
+    cover: '',
     likes: 0,
     dislikes: 0
   },
@@ -47,12 +47,11 @@ app.controller('MainController', ['$scope', function($scope){
     $scope.products[index].dislikes += 1;
   };
 
-$scope.myHandler = function (files) {
-  console.log(files);
-}
+// Select image from file button for cover photo 
 
 // Onclick function for adding a book
   $scope.addBook = function(name, price, date, image) {
+ 
 
   	name = $scope.name;
   	price = $scope.price;

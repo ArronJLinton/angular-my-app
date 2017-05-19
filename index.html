@@ -42,7 +42,9 @@ Value of title we show up when we view it in the browser
         <input id="name" ng-model="name" type="text" placeholder="Book Title">
         <input id="price" ng-model="price" type="text" placeholder="Enter Book Price">
         <input id="date" ng-model="date" type="date" placeholder="Publication Date">
-        <button ng-model="image" msl-file-input="myHandler">Select File</button>
+
+        <input id="cover-photo" type="file" ng-model="image"/>
+
         <input ng-click="addBook()" type="submit" value="Submit">
       <form>
       </div>
@@ -71,7 +73,7 @@ Value of title we show up when we view it in the browser
         <p class="dislikes" ng-click="minusOne($index)">+ {{ product.dislikes }}</p>       
       </div>
 
-        <view-summary></view-summary>
+        <!-- <view-summary></view-summary> -->
         
 
       </div>
