@@ -7,10 +7,15 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <!-- AngularJS library -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <!--  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+ <script src="./node_modules/angular/angular.min.js"></script>
 <!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
+
+<script src="./node_modules/angular-route/angular-route.js"></script>
+
 <script src="./node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
 <script src="./node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+
   </head>
 
 <!-- 
@@ -35,19 +40,19 @@ Value of title we show up when we view it in the browser
 
       <div>
         <label><h3>Add A Book<h3></label>
-      <form>
+      <!-- <form> -->
 <!-- Input controls provides data-binding by using the ng-model directive. -->
 <!-- With the ng-model directive you can bind the value of an input field to a variable created in AngularJS.
  -->
 
-        <input id="name" ng-model="name" type="text" placeholder="Book Title">
+<!--         <input id="name" ng-model="name" type="text" placeholder="Book Title">
         <input id="price" ng-model="price" type="text" placeholder="Enter Book Price">
         <input id="date" ng-model="date" type="date" placeholder="Publication Date">
 
         <input id="cover-photo" type="file" ng-model="image"/>
 
         <input ng-click="addBook()" type="submit" value="Submit">
-      <form>
+      <form> -->
 
 <form ng-app="fileUpload" name="form">
   Single Image with validations

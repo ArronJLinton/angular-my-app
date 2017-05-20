@@ -1,6 +1,6 @@
 
 // A controller manages the app's data. Here we use the property title to store a string, and attach it to $scope.
-app.controller('MainController', ['$scope', function($scope){
+app.controller('MainController', ['$scope', 'Upload', function($scope, Upload){
 
   $scope.title = 'Must Read Books For Professional & Personal Growth';
 
@@ -70,15 +70,15 @@ app.controller('MainController', ['$scope', function($scope){
         });
     };
     // for multiple files:
-    $scope.uploadFiles = function (files) {
-      if (files && files.length) {
-        for (var i = 0; i < files.length; i++) {
-          Upload.upload({ data: {file: files[i]}});
-        }
-        // or send them all together for HTML5 browsers:
-        Upload.upload({data: {file: files}});
-      }
-    }
+    // $scope.uploadFiles = function (files) {
+    //   if (files && files.length) {
+    //     for (var i = 0; i < files.length; i++) {
+    //       Upload.upload({ data: {file: files[i]}});
+    //     }
+    //     // or send them all together for HTML5 browsers:
+    //     Upload.upload({data: {file: files}});
+    //   }
+    // }
 
 // Onclick function for adding a book
   $scope.addBook = function(name, price, date, image) {
