@@ -40,30 +40,37 @@ Value of title we show up when we view it in the browser
 
       <div>
         <label><h3>Add A Book<h3></label>
-      <!-- <form> -->
+      <form ng-app="fileUpload">
 <!-- Input controls provides data-binding by using the ng-model directive. -->
 <!-- With the ng-model directive you can bind the value of an input field to a variable created in AngularJS.
  -->
 
-<!--         <input id="name" ng-model="name" type="text" placeholder="Book Title">
+        <input id="name" ng-model="name" type="text" placeholder="Book Title">
         <input id="price" ng-model="price" type="text" placeholder="Enter Book Price">
         <input id="date" ng-model="date" type="date" placeholder="Publication Date">
 
-        <input id="cover-photo" type="file" ng-model="image"/>
+        <input type="file" class="button" ngf-select ng-model="image" name="file" ngf-pattern="'image/*'"
+            ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+            ngf-resize="{width: 100, height: 100}">Select</input>
+
 
         <input ng-click="addBook()" type="submit" value="Submit">
-      <form> -->
+      <form>
 
-<form ng-app="fileUpload" name="form">
-  Single Image with validations
-  <div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
-    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
-    ngf-resize="{width: 100, height: 100}">Select</div>
-  Multiple files
-  <div class="button" ngf-select ng-model="files" ngf-multiple="true">Select</div>
-  Drop files: <div ngf-drop ng-model="files" class="drop-box">Drop</div>
-  <button type="submit" ng-click="submit()">submit</button>
-</form>
+
+<!-- 
+
+
+
+        <form ng-app="fileUpload" name="form">
+          Single Image with validations
+          <input type="file" class="button" ngf-select="upload($file)" ng-model="file" name="file" ngf-pattern="'image/*'"
+            ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+            ngf-resize="{width: 100, height: 100}">Select</input>
+         
+          <button type="submit" ng-click="add">submit</button>
+        </form> -->
+
       </div>
 
         <h2>{{ promo }}</h2>
